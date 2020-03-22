@@ -1,0 +1,216 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Gym_Lover.SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    
+
+    
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+		function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- //for-mobile-apps -->
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" media="all">
+<link type="text/css" rel="stylesheet" href="css/cm-overlay.css" /><!-- //overlay-->
+<link rel="stylesheet" href="css/owl.carousel.css" type="text/css" media="all"/> <!-- Owl-Carousel-CSS -->
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<!--fonts-->
+<link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900" rel="stylesheet">
+<!--//fonts-->
+
+</head>
+<body>
+
+        <div id="single" class="container-fluid">
+<!--home-->
+        <div data-target="home" class="banner-w3ls" id="home">
+		<!-- header -->
+                 <div class="header-inner">
+					  <h1 class="logo">
+						<a href="Login.aspx"><span>Gym</span>Workout</a></h1>
+						<nav class="navbar navbar-default">
+							<div class="navbar-header">
+								
+							</div>
+							<!-- navbar-header -->
+							<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+								<ul class="nav navbar-nav navbar-right">
+									<li><a href="Default.aspx" >Home</a></li>
+									<li><a href="AddDiet.aspx" >Diet </a></li>	
+									<li><a href="Login.aspx" >Login</a></li>
+                                    <li><a href="Contact.aspx" >Contact</a></li>
+									
+								</ul>
+							</div>
+							<div class="clearfix"> </div>	
+						</nav>
+						<div class="clearfix"></div>
+				</div>
+			<!-- //header -->
+			<div class="container">
+			<!-- banner-slider -->
+			<div class="w3l_banner_info" >
+				<div class="slider">
+					<div class="callbacks_container">
+								<ul class="rslides" id="slider3">
+									<li>
+										<div class="w3ls-info">
+											 <h4>PERFECT BODY REQUIRES A LOT OF TRAINING</h4>
+											<p>Start your way to healthy life with our personalized CrossFit programs.</p>
+										</div>
+
+									</li>
+									<li>
+										  <div class="w3ls-info">
+											<h4>IMPROVE THE PHYSICAL SHAPE OF YOUR BODY</h4>
+											<p>Start your way to healthy life with our personalized CrossFit programs.</p>
+										</div>
+
+									</li>
+									<li>
+										<div class="w3ls-info">
+											<h4>POWER UP WITH THESE PRO SECRETS</h4>
+											<p>Start your way to healthy life with our personalized CrossFit programs.</p>
+										</div>
+
+									</li>
+
+								</ul>
+					</div>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		<!-- //banner-slider -->
+               
+			</div>
+			
+        </div>
+<!--//home-->
+
+
+
+    <form runat="server">
+      
+
+      
+        <div class="container-fluid body-content">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+            
+        </div>
+
+    </form>
+            <!--contact-->
+<div class="contact-w3layouts">
+<div class="container">
+
+			
+			<div class="clearfix"></div>
+</div>
+</div>
+<!--//contact-->
+<!-- //footer -->
+<div class="footer-w3layouts">
+				<div class="container">
+				<div class="agile-copy">
+					<p>© 2020 Gym Workout. All rights reserved | Design by Harman</p>
+				</div>
+				
+					<div class="clearfix"></div>
+				</div>
+			</div>
+<!-- //footer -->
+</div>
+<!--//section4-->
+<!--fonts-->
+        <!-- vertical nav -->
+        
+    </div>
+    <!-- Page loads faster -->
+    <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+
+	<script src="js/responsiveslides.min.js"></script>
+							<script>
+								// You can also use "$(window).load(function() {"
+								$(function () {
+								  // Slideshow 3
+								  $("#slider3").responsiveSlides({
+									auto: true,
+									pager:false,
+									nav:true,
+									speed: 500,
+									namespace: "callbacks",
+									before: function () {
+									  $('.events').append("<li>before event fired.</li>");
+									},
+									after: function () {
+									  $('.events').append("<li>after event fired.</li>");
+									}
+								  });
+							
+								});
+							 </script>
+<!-- Owl-Carousel-JavaScript -->
+	<script src="js/owl.carousel.js"></script>
+	<script>
+		$(document).ready(function() {
+			$("#owl-demo").owlCarousel ({
+				items : 3,
+				lazyLoad : true,
+				autoPlay : true,
+				pagination : true,
+			});
+		});
+	</script>
+	<!-- //Owl-Carousel-JavaScript -->  
+	<!-- //galley-effect-JavaScript -->
+	<script src="js/jquery.tools.min.js"></script>
+				<script src="js/jquery.mobile.custom.min.js"></script>
+
+	<script src="js/jquery.cm-overlay.js"></script>
+				<script>
+					$(document).ready(function(){
+						$('.cm-overlay').cmOverlay();
+					});
+				</script>
+	<!-- //galley-effect-JavaScript -->
+
+	<script type="text/javascript" src="js/jquery.easing.min.js"></script>
+	<script src="js/jquery.singlefull.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+        $("#single").singlefull({
+            speed: 1000,
+            loopScroll:true,
+            loopTop:false,
+            loopBottom:true
+        });
+        // Just a javascript alignment to the content
+        function alignContent() {
+            var windowHeight = $(window).height();
+
+            $('.content-resizer').each(function() {
+                contentHeight = $(this).height();
+                $(this).css('top', (windowHeight / 2) - (contentHeight / 2));
+            });
+
+            $('.alt-img').html($("#img-example").attr('src'));
+        }
+
+        // Execute the function
+        alignContent();
+
+        // Bind the function to the window.onresize
+        $(window).bind("resize", function() {
+            alignContent();
+        });
+
+
+    });
+    </script>
+	<script type="text/javascript" src="js/bootstrap-3.1.1.min.js"></script>
+
+
+</body>
+</html>
